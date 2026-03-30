@@ -6,7 +6,7 @@ interface Todo {
   isComplete: boolean;
 }
 
-const API_URL = 'http://localhost:5181/todoitems';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5181/todoitems';
 
 export default function App() {
   const [todos, setTodos] = useState<Todo[]>([]);

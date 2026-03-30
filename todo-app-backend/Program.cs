@@ -10,9 +10,12 @@ builder.Services.AddDbContext<TodoDb>(opt => opt.UseSqlite("Data Source=todo.db"
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp",
-        policy => policy.WithOrigins("http://localhost:5173") // Default Vite port
-                        .AllowAnyMethod()
-                        .AllowAnyHeader());
+        policy => policy.WithOrigins(
+                        "http://localhost:5173", 
+                        "https://your-future-vercel-app-url.vercel.app" // You will update this later!
+                    ) 
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
 });
 
 var app = builder.Build();
