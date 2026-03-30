@@ -1,0 +1,14 @@
+# Node.js / React
+node_modules/
+dist/
+.env
+
+# .NET / C#
+bin/
+obj/
+*.sqlite
+todo.db
+
+# OS Files
+.DS_Store
+Thumbs.db
