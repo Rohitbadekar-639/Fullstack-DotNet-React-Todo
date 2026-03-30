@@ -12,7 +12,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowReactApp",
         policy => policy.WithOrigins(
                         "http://localhost:5173", 
-                        "https://your-future-vercel-app-url.vercel.app" // You will update this later!
+                        "https://dot-net-react-todo-app.vercel.app" // You will update this later!
                     ) 
                     .AllowAnyMethod()
                     .AllowAnyHeader());
